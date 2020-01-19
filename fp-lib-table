@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name Logo)(type KiCad)(uri /home/urish/Dropbox/KiCad/magnetic_qwiic/Logo.pretty)(options "")(descr "")(disabled))
+  (lib (name Logo_win)(type KiCad)(uri E:/Dropbox/KiCad/magnetic_qwiic/Logo.pretty)(options "")(descr ""))
+)

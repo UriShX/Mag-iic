@@ -1,0 +1,735 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Magnetic I2C buffer w/qwiic connectors"
+Date "2020-01-08"
+Rev "A"
+Comp "UriShX"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x04_Male J4
+U 1 1 5E15E5FF
+P 4650 2000
+F 0 "J4" H 4700 1600 50  0000 R CNN
+F 1 "PogoPin_M" H 4850 1700 50  0000 R CNN
+F 2 "MyFootprintLib:QWIIC_PP" H 4650 2000 50  0001 C CNN
+F 3 "~" H 4650 2000 50  0001 C CNN
+	1    4650 2000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7300 1900 7600 1900
+Wire Wire Line
+	7300 2000 7600 2000
+Wire Wire Line
+	4450 2000 4150 2000
+Wire Wire Line
+	7300 2100 7650 2100
+$Comp
+L Connector:Conn_01x04_Female J3
+U 1 1 5E15ED77
+P 7100 1900
+F 0 "J3" H 7050 2200 50  0000 L CNN
+F 1 "PogoPin_F" H 6850 2100 50  0000 L CNN
+F 2 "MyFootprintLib:QWIIC_PP" H 7100 1900 50  0001 C CNN
+F 3 "~" H 7100 1900 50  0001 C CNN
+	1    7100 1900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5E183EFE
+P 5900 1750
+F 0 "D1" V 5939 1633 50  0000 R CNN
+F 1 "LED" V 5848 1633 50  0000 R CNN
+F 2 "LEDs:LED_1206_HandSoldering" H 5900 1750 50  0001 C CNN
+F 3 "~" H 5900 1750 50  0001 C CNN
+	1    5900 1750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E184ACC
+P 5900 2150
+F 0 "R1" H 5970 2196 50  0000 L CNN
+F 1 "320" H 5970 2105 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5830 2150 50  0001 C CNN
+F 3 "~" H 5900 2150 50  0001 C CNN
+	1    5900 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR01
+U 1 1 5E184FD2
+P 5900 1500
+F 0 "#PWR01" H 5900 1350 50  0001 C CNN
+F 1 "VCC" H 5917 1673 50  0000 C CNN
+F 2 "" H 5900 1500 50  0001 C CNN
+F 3 "" H 5900 1500 50  0001 C CNN
+	1    5900 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 1500 5900 1600
+Wire Wire Line
+	5900 1900 5900 2000
+$Comp
+L power:GND #PWR014
+U 1 1 5E185E6A
+P 5900 2400
+F 0 "#PWR014" H 5900 2150 50  0001 C CNN
+F 1 "GND" H 5905 2227 50  0000 C CNN
+F 2 "" H 5900 2400 50  0001 C CNN
+F 3 "" H 5900 2400 50  0001 C CNN
+	1    5900 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 2400 5900 2300
+$Comp
+L Connector_Generic:Conn_01x04 J6
+U 1 1 5E163DB1
+P 10850 1900
+F 0 "J6" H 10850 2200 50  0000 C CNN
+F 1 "JST_QWIIC" H 10850 2100 50  0000 C CNN
+F 2 "Connectors_JST:JST_SH_SM04B-SRSS-TB_04x1.00mm_Angled" H 10850 1900 50  0001 C CNN
+F 3 "~" H 10850 1900 50  0001 C CNN
+	1    10850 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR015
+U 1 1 5E1914A8
+P 3900 3200
+F 0 "#PWR015" H 3900 3050 50  0001 C CNN
+F 1 "VCC" H 3917 3373 50  0000 C CNN
+F 2 "" H 3900 3200 50  0001 C CNN
+F 3 "" H 3900 3200 50  0001 C CNN
+	1    3900 3200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3200 3900 3400
+Wire Wire Line
+	5700 4250 5700 3400
+Connection ~ 5700 3400
+Wire Wire Line
+	7000 3400 7000 4300
+Connection ~ 7000 3400
+Wire Wire Line
+	7000 3400 7300 3400
+$Comp
+L Device:R R2
+U 1 1 5E1947BD
+P 6700 4100
+F 0 "R2" H 6770 4146 50  0000 L CNN
+F 1 "10k" H 6770 4055 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6630 4100 50  0001 C CNN
+F 3 "~" H 6700 4100 50  0001 C CNN
+	1    6700 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3950 6700 3400
+Connection ~ 6700 3400
+Wire Wire Line
+	6700 3400 7000 3400
+Wire Wire Line
+	4500 4300 4500 3400
+Connection ~ 4500 3400
+Text Notes 6150 3350 0    50   ~ 0
+Place cap between\nVCC and GND pins
+Wire Wire Line
+	5700 3400 6200 3400
+Wire Wire Line
+	6200 3400 6700 3400
+Connection ~ 6200 3400
+Wire Wire Line
+	6200 4050 6200 3900
+$Comp
+L power:GND #PWR016
+U 1 1 5E1970D6
+P 6200 4050
+F 0 "#PWR016" H 6200 3800 50  0001 C CNN
+F 1 "GND" H 6205 3877 50  0000 C CNN
+F 2 "" H 6200 4050 50  0001 C CNN
+F 3 "" H 6200 4050 50  0001 C CNN
+	1    6200 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 3600 6200 3400
+$Comp
+L Device:C C1
+U 1 1 5E18F1E0
+P 6200 3750
+F 0 "C1" H 6315 3796 50  0000 L CNN
+F 1 "0.01uF" H 6315 3705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6238 3600 50  0001 C CNN
+F 3 "~" H 6200 3750 50  0001 C CNN
+	1    6200 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3400 4200 3400
+Wire Wire Line
+	4200 3400 4500 3400
+Connection ~ 4200 3400
+Wire Wire Line
+	4200 4600 4200 3400
+$Comp
+L Device:R R5
+U 1 1 5E168B9D
+P 4200 4750
+F 0 "R5" H 4270 4796 50  0000 L CNN
+F 1 "4k7" H 4270 4705 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4130 4750 50  0001 C CNN
+F 3 "~" H 4200 4750 50  0001 C CNN
+	1    4200 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 4900 4200 5000
+Wire Wire Line
+	4200 5000 5100 5000
+Wire Wire Line
+	4500 4800 5100 4800
+Wire Wire Line
+	4500 4600 4500 4800
+Wire Wire Line
+	4500 3400 4800 3400
+Wire Wire Line
+	4800 3400 5700 3400
+Connection ~ 4800 3400
+Wire Wire Line
+	4800 4600 4800 3400
+Wire Wire Line
+	5100 4600 4800 4600
+Wire Wire Line
+	5700 5450 5700 5350
+$Comp
+L power:GND #PWR017
+U 1 1 5E196269
+P 5700 5450
+F 0 "#PWR017" H 5700 5200 50  0001 C CNN
+F 1 "GND" H 5705 5277 50  0000 C CNN
+F 2 "" H 5700 5450 50  0001 C CNN
+F 3 "" H 5700 5450 50  0001 C CNN
+	1    5700 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 4600 6700 4250
+Wire Wire Line
+	6300 4600 6700 4600
+Wire Wire Line
+	7300 5000 7300 4900
+Wire Wire Line
+	6300 5000 7300 5000
+Wire Wire Line
+	7000 4800 7000 4600
+Wire Wire Line
+	6300 4800 7000 4800
+Wire Wire Line
+	7300 3400 7300 4600
+$Comp
+L Device:R R4
+U 1 1 5E16A4BC
+P 7000 4450
+F 0 "R4" H 7070 4496 50  0000 L CNN
+F 1 "4k7" H 7070 4405 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6930 4450 50  0001 C CNN
+F 3 "~" H 7000 4450 50  0001 C CNN
+	1    7000 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5E168FD9
+P 7300 4750
+F 0 "R6" H 7370 4796 50  0000 L CNN
+F 1 "4k7" H 7370 4705 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7230 4750 50  0001 C CNN
+F 3 "~" H 7300 4750 50  0001 C CNN
+	1    7300 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E1685ED
+P 4500 4450
+F 0 "R3" H 4570 4496 50  0000 L CNN
+F 1 "4k7" H 4570 4405 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4430 4450 50  0001 C CNN
+F 3 "~" H 4500 4450 50  0001 C CNN
+	1    4500 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L magnetic_qwiic:TCA4311a U1
+U 1 1 5E16624A
+P 5700 4800
+F 0 "U1" H 5350 5300 50  0000 C CNN
+F 1 "TCA4311a" H 5450 5200 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5700 4800 50  0001 C CNN
+F 3 "" H 5700 4800 50  0001 C CNN
+	1    5700 4800
+	1    0    0    -1  
+$EndComp
+Text Label 5100 5000 2    50   ~ 0
+SDA_IN
+Text Label 5100 4800 2    50   ~ 0
+SCL_IN
+Text Label 6300 5000 0    50   ~ 0
+SDA_OUT
+Text Label 6300 4800 0    50   ~ 0
+SCL_OUT
+Text Label 1450 2100 2    50   ~ 0
+SCL_IN
+Text Label 1450 2000 2    50   ~ 0
+SDA_IN
+Wire Wire Line
+	1150 2100 1450 2100
+Wire Wire Line
+	1150 2000 1450 2000
+Wire Wire Line
+	1800 1900 1150 1900
+Wire Wire Line
+	1800 1700 1800 1900
+$Comp
+L power:VCC #PWR02
+U 1 1 5E16FDB7
+P 1800 1700
+F 0 "#PWR02" H 1800 1550 50  0001 C CNN
+F 1 "VCC" H 1817 1873 50  0000 C CNN
+F 2 "" H 1800 1700 50  0001 C CNN
+F 3 "" H 1800 1700 50  0001 C CNN
+	1    1800 1700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 1800 1950 1950
+Wire Wire Line
+	1150 1800 1950 1800
+$Comp
+L power:GND #PWR08
+U 1 1 5E16F0D9
+P 1950 1950
+F 0 "#PWR08" H 1950 1700 50  0001 C CNN
+F 1 "GND" H 1955 1777 50  0000 C CNN
+F 2 "" H 1950 1950 50  0001 C CNN
+F 3 "" H 1950 1950 50  0001 C CNN
+	1    1950 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 5E16473D
+P 950 1900
+F 0 "J1" H 868 2217 50  0000 C CNN
+F 1 "JST_QWIIC" H 868 2126 50  0000 C CNN
+F 2 "Connectors_JST:JST_SH_SM04B-SRSS-TB_04x1.00mm_Angled" H 950 1900 50  0001 C CNN
+F 3 "~" H 950 1900 50  0001 C CNN
+	1    950  1900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 1800 8450 1800
+Wire Wire Line
+	8450 1950 8450 1800
+$Comp
+L power:GND #PWR010
+U 1 1 5E1D87B9
+P 8450 1950
+F 0 "#PWR010" H 8450 1700 50  0001 C CNN
+F 1 "GND" H 8455 1777 50  0000 C CNN
+F 2 "" H 8450 1950 50  0001 C CNN
+F 3 "" H 8450 1950 50  0001 C CNN
+	1    8450 1950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 1900 8550 1900
+Wire Wire Line
+	8550 1700 8550 1900
+$Comp
+L power:VCC #PWR04
+U 1 1 5E1D87C5
+P 8550 1700
+F 0 "#PWR04" H 8550 1550 50  0001 C CNN
+F 1 "VCC" H 8567 1873 50  0000 C CNN
+F 2 "" H 8550 1700 50  0001 C CNN
+F 3 "" H 8550 1700 50  0001 C CNN
+	1    8550 1700
+	-1   0    0    -1  
+$EndComp
+Text Label 8650 2100 0    50   ~ 0
+SCL_OUT
+Text Label 8650 2000 0    50   ~ 0
+SDA_OUT
+Wire Wire Line
+	9000 2100 8650 2100
+Wire Wire Line
+	9000 2000 8650 2000
+$Comp
+L Connector_Generic:Conn_01x04 J5
+U 1 1 5E1D87D3
+P 9200 1900
+F 0 "J5" H 9200 2200 50  0000 C CNN
+F 1 "Header" H 9200 2100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 9200 1900 50  0001 C CNN
+F 3 "~" H 9200 1900 50  0001 C CNN
+	1    9200 1900
+	1    0    0    -1  
+$EndComp
+Text Label 3250 2100 2    50   ~ 0
+SCL_IN
+Text Label 3250 2000 2    50   ~ 0
+SDA_IN
+Wire Wire Line
+	2950 2100 3250 2100
+Wire Wire Line
+	2950 2000 3250 2000
+Wire Wire Line
+	3300 1900 2950 1900
+Wire Wire Line
+	3300 1700 3300 1900
+$Comp
+L power:VCC #PWR03
+U 1 1 5E1DD8A9
+P 3300 1700
+F 0 "#PWR03" H 3300 1550 50  0001 C CNN
+F 1 "VCC" H 3317 1873 50  0000 C CNN
+F 2 "" H 3300 1700 50  0001 C CNN
+F 3 "" H 3300 1700 50  0001 C CNN
+	1    3300 1700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1800 3450 1950
+Wire Wire Line
+	2950 1800 3450 1800
+$Comp
+L power:GND #PWR09
+U 1 1 5E1DD8B5
+P 3450 1950
+F 0 "#PWR09" H 3450 1700 50  0001 C CNN
+F 1 "GND" H 3455 1777 50  0000 C CNN
+F 2 "" H 3450 1950 50  0001 C CNN
+F 3 "" H 3450 1950 50  0001 C CNN
+	1    3450 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 5E1DD8BF
+P 2750 1900
+F 0 "J2" H 2668 2217 50  0000 C CNN
+F 1 "HEADER" H 2668 2126 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 2750 1900 50  0001 C CNN
+F 3 "~" H 2750 1900 50  0001 C CNN
+	1    2750 1900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2150 7650 2100
+Wire Wire Line
+	7300 1800 7650 1800
+Wire Wire Line
+	7650 1750 7650 1800
+$Comp
+L power:VCC #PWR07
+U 1 1 5E160D25
+P 7650 1750
+F 0 "#PWR07" H 7650 1600 50  0001 C CNN
+F 1 "VCC" H 7667 1923 50  0000 C CNN
+F 2 "" H 7650 1750 50  0001 C CNN
+F 3 "" H 7650 1750 50  0001 C CNN
+	1    7650 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5E1614A5
+P 7650 2150
+F 0 "#PWR013" H 7650 1900 50  0001 C CNN
+F 1 "GND" H 7655 1977 50  0000 C CNN
+F 2 "" H 7650 2150 50  0001 C CNN
+F 3 "" H 7650 2150 50  0001 C CNN
+	1    7650 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 1800 4450 1800
+Wire Wire Line
+	4100 1750 4100 1800
+Wire Wire Line
+	4100 2100 4450 2100
+Wire Wire Line
+	4100 2150 4100 2100
+$Comp
+L power:GND #PWR012
+U 1 1 5E1616F7
+P 4100 2150
+F 0 "#PWR012" H 4100 1900 50  0001 C CNN
+F 1 "GND" H 4105 1977 50  0000 C CNN
+F 2 "" H 4100 2150 50  0001 C CNN
+F 3 "" H 4100 2150 50  0001 C CNN
+	1    4100 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR06
+U 1 1 5E161CED
+P 4100 1750
+F 0 "#PWR06" H 4100 1600 50  0001 C CNN
+F 1 "VCC" H 4117 1923 50  0000 C CNN
+F 2 "" H 4100 1750 50  0001 C CNN
+F 3 "" H 4100 1750 50  0001 C CNN
+	1    4100 1750
+	1    0    0    -1  
+$EndComp
+Text Label 4150 2000 0    50   ~ 0
+SCL_IN
+Text Label 4150 1900 0    50   ~ 0
+SDA_IN
+Text Label 7600 2000 2    50   ~ 0
+SCL_IN
+Text Label 7600 1900 2    50   ~ 0
+SDA_IN
+$Comp
+L Connector_Generic:Conn_01x01 J8
+U 1 1 5E18562A
+P 3900 1800
+F 0 "J8" H 4000 1800 50  0000 C CNN
+F 1 "Conn_01x01" H 3818 1926 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 3900 1800 50  0001 C CNN
+F 3 "~" H 3900 1800 50  0001 C CNN
+	1    3900 1800
+	-1   0    0    -1  
+$EndComp
+Connection ~ 4100 1800
+Wire Wire Line
+	4450 1900 4150 1900
+$Comp
+L Connector_Generic:Conn_01x01 J12
+U 1 1 5E189C68
+P 3950 1900
+F 0 "J12" H 4050 1900 50  0000 C CNN
+F 1 "Conn_01x01" H 3868 2026 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 3950 1900 50  0001 C CNN
+F 3 "~" H 3950 1900 50  0001 C CNN
+	1    3950 1900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J14
+U 1 1 5E18A053
+P 3950 2000
+F 0 "J14" H 4050 2000 50  0000 C CNN
+F 1 "Conn_01x01" H 3868 2126 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 3950 2000 50  0001 C CNN
+F 3 "~" H 3950 2000 50  0001 C CNN
+	1    3950 2000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J10
+U 1 1 5E18A2A2
+P 3900 2100
+F 0 "J10" H 4000 2100 50  0000 C CNN
+F 1 "Conn_01x01" H 3818 2226 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 3900 2100 50  0001 C CNN
+F 3 "~" H 3900 2100 50  0001 C CNN
+	1    3900 2100
+	-1   0    0    -1  
+$EndComp
+Connection ~ 4100 2100
+$Comp
+L Connector_Generic:Conn_01x01 J16
+U 1 1 5E18C0CF
+P 7850 1800
+F 0 "J16" H 7950 1800 50  0000 C CNN
+F 1 "Conn_01x01" H 7768 1926 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 7850 1800 50  0001 C CNN
+F 3 "~" H 7850 1800 50  0001 C CNN
+	1    7850 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J20
+U 1 1 5E18C0D9
+P 7800 1900
+F 0 "J20" H 7900 1900 50  0000 C CNN
+F 1 "Conn_01x01" H 7718 2026 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 7800 1900 50  0001 C CNN
+F 3 "~" H 7800 1900 50  0001 C CNN
+	1    7800 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J22
+U 1 1 5E18C0E3
+P 7800 2000
+F 0 "J22" H 7900 2000 50  0000 C CNN
+F 1 "Conn_01x01" H 7718 2126 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 7800 2000 50  0001 C CNN
+F 3 "~" H 7800 2000 50  0001 C CNN
+	1    7800 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J18
+U 1 1 5E18C0ED
+P 7850 2100
+F 0 "J18" H 7950 2100 50  0000 C CNN
+F 1 "Conn_01x01" H 7768 2226 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 7850 2100 50  0001 C CNN
+F 3 "~" H 7850 2100 50  0001 C CNN
+	1    7850 2100
+	1    0    0    -1  
+$EndComp
+Connection ~ 7650 1800
+Connection ~ 7650 2100
+$Comp
+L Connector_Generic:Conn_01x01 J15
+U 1 1 5E1916D3
+P 9700 1700
+F 0 "J15" H 9800 1700 50  0000 C CNN
+F 1 "Conn_01x01" H 9618 1826 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 9700 1700 50  0001 C CNN
+F 3 "~" H 9700 1700 50  0001 C CNN
+	1    9700 1700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J17
+U 1 1 5E190E04
+P 9600 1800
+F 0 "J17" H 9700 1800 50  0000 C CNN
+F 1 "Conn_01x01" H 9518 1926 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 9600 1800 50  0001 C CNN
+F 3 "~" H 9600 1800 50  0001 C CNN
+	1    9600 1800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10650 2000 10300 2000
+Wire Wire Line
+	10650 2100 10300 2100
+Text Label 10300 2000 0    50   ~ 0
+SDA_OUT
+Text Label 10300 2100 0    50   ~ 0
+SCL_OUT
+$Comp
+L power:VCC #PWR05
+U 1 1 5E17BF5D
+P 9900 1700
+F 0 "#PWR05" H 9900 1550 50  0001 C CNN
+F 1 "VCC" H 9917 1873 50  0000 C CNN
+F 2 "" H 9900 1700 50  0001 C CNN
+F 3 "" H 9900 1700 50  0001 C CNN
+	1    9900 1700
+	-1   0    0    -1  
+$EndComp
+Connection ~ 9900 1700
+Wire Wire Line
+	9900 1700 9900 1900
+$Comp
+L power:GND #PWR011
+U 1 1 5E17BF69
+P 9800 1950
+F 0 "#PWR011" H 9800 1700 50  0001 C CNN
+F 1 "GND" H 9805 1777 50  0000 C CNN
+F 2 "" H 9800 1950 50  0001 C CNN
+F 3 "" H 9800 1950 50  0001 C CNN
+	1    9800 1950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 1950 9800 1800
+Connection ~ 9800 1800
+Wire Wire Line
+	10650 1900 9900 1900
+Wire Wire Line
+	10650 1800 9800 1800
+$Comp
+L Connector_Generic:Conn_01x01 J19
+U 1 1 5E1A46B8
+P 4000 5000
+F 0 "J19" H 4100 5000 50  0000 C CNN
+F 1 "Conn_01x01" H 3918 5126 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 4000 5000 50  0001 C CNN
+F 3 "~" H 4000 5000 50  0001 C CNN
+	1    4000 5000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J21
+U 1 1 5E1A4A17
+P 4500 5300
+F 0 "J21" H 4600 5300 50  0000 C CNN
+F 1 "Conn_01x01" H 4418 5426 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 4500 5300 50  0001 C CNN
+F 3 "~" H 4500 5300 50  0001 C CNN
+	1    4500 5300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J11
+U 1 1 5E1A4C9C
+P 1650 2000
+F 0 "J11" H 1750 2000 50  0000 C CNN
+F 1 "Conn_01x01" H 1568 2126 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 1650 2000 50  0001 C CNN
+F 3 "~" H 1650 2000 50  0001 C CNN
+	1    1650 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J13
+U 1 1 5E1A4CA6
+P 1650 2100
+F 0 "J13" H 1750 2100 50  0000 C CNN
+F 1 "Conn_01x01" H 1568 2226 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 1650 2100 50  0001 C CNN
+F 3 "~" H 1650 2100 50  0001 C CNN
+	1    1650 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J7
+U 1 1 5E1B1CFB
+P 2000 1700
+F 0 "J7" H 2100 1700 50  0000 C CNN
+F 1 "Conn_01x01" H 1918 1826 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 2000 1700 50  0001 C CNN
+F 3 "~" H 2000 1700 50  0001 C CNN
+	1    2000 1700
+	1    0    0    -1  
+$EndComp
+Connection ~ 1800 1700
+$Comp
+L Connector_Generic:Conn_01x01 J9
+U 1 1 5E1B2283
+P 2150 1950
+F 0 "J9" H 2250 1950 50  0000 C CNN
+F 1 "Conn_01x01" H 2068 2076 50  0001 C CNN
+F 2 "MyFootprintLib:SMD_pad_for_fillet_solder" H 2150 1950 50  0001 C CNN
+F 3 "~" H 2150 1950 50  0001 C CNN
+	1    2150 1950
+	1    0    0    -1  
+$EndComp
+Connection ~ 1950 1950
+Connection ~ 4200 5000
+Wire Wire Line
+	4500 5100 4500 4800
+Connection ~ 4500 4800
+$EndSCHEMATC
